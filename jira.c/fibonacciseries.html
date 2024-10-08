@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var a = 0, b = 1, next, i;
+var no = parseInt(prompt("Enter the limit of series"), 10); 
+
+if (isNaN(no) || no <= 0) {
+    document.write("Please enter a valid number greater than 0.");
+} else {
+    document.write("Fibonacci Series: <br>");
+    
+    document.write(a + "<br>");
+    
+    if (no > 1) {
+        document.write(b + "<br>");
+    }
+
+     for (i = 3; i <= no; i++) {
+        next = a + b;
+        document.write(next + "<br>");
+        a = b;  
+        b = next;  
+    }
+}
+</script>
+
+</body>
+</html>
